@@ -5,24 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace trinagle
+namespace triangle
 {
     class Program
     {
         static void Main(string[] args)
         {
-           double  x1, x2, x3, y1, y2, y3;
-            Console.Write("Enter coordinate x of dot A: ");
+            double  x1, x2, x3, y1, y2, y3;
+            Console.Write("Enter coordinate x of dot A:\n");
             x1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter coordinate y of dot A: ");
+            Console.Write("Enter coordinate y of dot A:\n");
             y1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter coordinate x of dot B: ");
+            Console.Write("Enter coordinate x of dot B:\n");
             x2 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter coordinate y of dot B: ");
+            Console.Write("Enter coordinate y of dot B:\n");
             y2 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter coordinate x of dot C: ");
+            Console.Write("Enter coordinate x of dot C:\n");
             x3 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter coordinate y of dot C: ");
+            Console.Write("Enter coordinate y of dot C:\n");
             y3 = Convert.ToDouble(Console.ReadLine());
 
             double AB, BC, AC;
@@ -30,42 +30,43 @@ namespace trinagle
             BC = Math.Sqrt(Math.Pow(x2 - x3, 2) + Math.Pow(y2 - y3, 2));
             AC = Math.Sqrt(Math.Pow(x1 - x3, 2) + Math.Pow(y1 - y3, 2));
 
-            Console.WriteLine("Legth of AB is: " + AB);
-            Console.WriteLine("Legth of BC is: " + BC);
-            Console.WriteLine("Legth of AC is: " + AC);
-
+            Console.WriteLine("\nLength of AB is: " + "'" + AB + "'");
+            Console.WriteLine("Length of BC is: " + "'" + BC + "'");
+            Console.WriteLine("Length of AC is: " + "'" + AC + "'");
+            
             if ((AB == BC) && (BC == AC))
-                Console.WriteLine("Thinagle is equilateral");
+                Console.WriteLine("\nThiangle IS 'Equilateral'");
+
             else
             {
-                Console.WriteLine("Thinagle is NOT equilateral");
+                Console.WriteLine("\nThiangle IS NOT 'Equilateral'");
             }
 
             if (((AB == BC) && (BC != AC)) || ((AB == AC) && (AC != BC )) || ((BC == AC) && (AC != AB)))
-                Console.WriteLine("Thinagle is isosceles");
+                Console.WriteLine("Thiangle IS 'Isosceles'");
             else
             {
-                Console.WriteLine("Thinagle is NOT isosceles");
+                Console.WriteLine("Thiangle IS NOT 'Isosceles'");
             }
 
-            if (Math.Pow(AB, 2) - (Math.Pow(BC, 2) + Math.Pow(AC, 2)) <= -0.5)
-                Console.WriteLine("Thinagle is right");
-
-            else if (Math.Pow(AC, 2) - (Math.Pow(AB, 2) + Math.Pow(BC, 2)) <= -0.5)
-                Console.WriteLine("Thinagle is right");
-
-            else if (Math.Pow(BC, 2) - (Math.Pow(AB, 2) + Math.Pow(AC, 2)) <= -0.5)
-                Console.WriteLine("Thinagle is right");
+            if (Math.Pow(AB, 2) - (Math.Pow(BC, 2) + Math.Pow(AC, 2)) <= -0.2)
+                Console.WriteLine("Thiangle IS 'Right'");
+            
+            else if (Math.Pow(AC, 2) - (Math.Pow(AB, 2) + Math.Pow(BC, 2)) <= -0.2)
+                    Console.WriteLine("Thiangle IS 'Right'");
+            
+            else if (Math.Pow(BC, 2) - (Math.Pow(AB, 2) + Math.Pow(AC, 2)) <= -0.2)
+                Console.WriteLine("Thiangle IS 'Right'");
 
             else
             {
-                Console.WriteLine("Thinagle is NOT right");
+                Console.WriteLine("Thiangle IS NOT 'Right'");
             }
 
             double P = AB + BC + AC;
-            Console.WriteLine("Perimeter: " + P);
+            Console.WriteLine("\nPerimeter: " + "'" + P + "'");
 
-            Console.WriteLine("Parity number is range from 0 to trinagle perimeter: ");
+            Console.WriteLine("\nParity number is range from 0 to triangle perimeter: ");
             for (double i = 0; i < P; i = i + 2)
             {
                 
