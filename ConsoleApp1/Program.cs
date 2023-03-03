@@ -35,32 +35,32 @@ namespace triangle
             Console.WriteLine("Length of AC is: " + "'" + AC + "'");
             
             if ((AB == BC) && (BC == AC))
-                Console.WriteLine("\nThiangle IS 'Equilateral'");
+                Console.WriteLine("\nTriangle IS 'Equilateral'");
 
             else
             {
-                Console.WriteLine("\nThiangle IS NOT 'Equilateral'");
+                Console.WriteLine("\nTriangle IS NOT 'Equilateral'");
             }
 
             if (((AB == BC) && (BC != AC)) || ((AB == AC) && (AC != BC )) || ((BC == AC) && (AC != AB)))
-                Console.WriteLine("Thiangle IS 'Isosceles'");
+                Console.WriteLine("Triangle IS 'Isosceles'");
             else
             {
-                Console.WriteLine("Thiangle IS NOT 'Isosceles'");
+                Console.WriteLine("Triangle IS NOT 'Isosceles'");
             }
 
             if (Math.Pow(AB, 2) - (Math.Pow(BC, 2) + Math.Pow(AC, 2)) <= -0.2)
-                Console.WriteLine("Thiangle IS 'Right'");
+                Console.WriteLine("Triangle IS 'Right'");
             
             else if (Math.Pow(AC, 2) - (Math.Pow(AB, 2) + Math.Pow(BC, 2)) <= -0.2)
-                    Console.WriteLine("Thiangle IS 'Right'");
+                    Console.WriteLine("Triangle IS 'Right'");
             
             else if (Math.Pow(BC, 2) - (Math.Pow(AB, 2) + Math.Pow(AC, 2)) <= -0.2)
-                Console.WriteLine("Thiangle IS 'Right'");
+                Console.WriteLine("Triangle IS 'Right'");
 
             else
             {
-                Console.WriteLine("Thiangle IS NOT 'Right'");
+                Console.WriteLine("Triangle IS NOT 'Right'");
             }
 
             double P = AB + BC + AC;
